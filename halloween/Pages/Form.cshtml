@@ -1,0 +1,66 @@
+﻿@page
+@model FormModel
+@{
+}
+
+<div id="ecard">
+
+    <form method="post" onsubmit="myFunction()">
+
+        <div class="form-group">
+            <label asp-for="bridgeGreetings.receiverName"></label>
+            <input type="text" asp-for="bridgeGreetings.receiverName">
+            <div asp-validation-for="bridgeGreetings.receiverName" class="text-danger"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="bridgeGreetings.receiverEmail"></label>
+            <input type="text" asp-for="bridgeGreetings.receiverEmail">
+            <div asp-validation-for="bridgeGreetings.receiverEmail" class="text-danger"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="bridgeGreetings.subject"></label>
+            <input type="text" asp-for="bridgeGreetings.subject">
+            <div asp-validation-for="bridgeGreetings.subject" class="text-danger"></div>
+            <div class="countdown"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="bridgeGreetings.message"></label>
+            <input type="text" asp-for="bridgeGreetings.message">
+            <div asp-validation-for="bridgeGreetings.message" class="text-danger"></div>
+            <textarea name="message" placeholder="Write something.." style="height:100px" maxlength="30"></textarea>
+            <div class="countdown"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="bridgeGreetings.senderName"></label>
+            <input type="text" asp-for="bridgeGreetings.senderName">
+            <div asp-validation-for="bridgeGreetings.senderName" class="text-danger"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="bridgeGreetings.senderEmail"></label>
+            <input type="text" asp-for="bridgeGreetings.senderEmail">
+            <div asp-validation-for="bridgeGreetings.senderEmail" class="text-danger"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="bridgeGreetings.agree"></label>
+            <input type="text" asp-for="bridgeGreetings.agree">
+            <div asp-validation-for="bridgeGreetings.agree" class="text-danger"></div>
+        </div>
+
+        <input id="submitbutton" type="submit" value="Preview" class="btn">
+
+    </form>
+</div>
+
+
+<script>
+    function myFunction() {
+        var first = document.getElementById("first").value;
+        alert(`${first} will be spooked.`)
+    }
+</script>
